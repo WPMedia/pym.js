@@ -348,9 +348,7 @@
 				if (element.getAttribute('data-pym-' + attribute) !== null) {
 					switch (settings[attribute]) {
 						case 'boolean':
-							config[attribute] = !(
-								element.getAttribute('data-pym-' + attribute) === 'false'
-							); // jshint ignore:line
+							config[attribute] = !(element.getAttribute('data-pym-' + attribute) === 'false'); // jshint ignore:line
 							console.log(
 								'lib.autoInit: boolean config[' + attribute + ']',
 								config[attribute]
@@ -1407,9 +1405,7 @@
 			);
 
 			if (originalHtmlClasses.indexOf(newClassForHtml) < 0) {
-				htmlElement.className = originalHtmlClasses
-					? originalHtmlClasses + ' ' + newClassForHtml
-					: newClassForHtml;
+				htmlElement.className = originalHtmlClasses ? originalHtmlClasses + ' ' + newClassForHtml : newClassForHtml;
 				if (onMarkedEmbeddedStatus) {
 					onMarkedEmbeddedStatus(newClassForHtml);
 				}
